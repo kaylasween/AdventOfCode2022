@@ -1,16 +1,5 @@
-#split by line
-#if empty line, finish list
-
 weights = []
 elfWeight = []
-
-# for line in content:
-#   if (line != "\n"):
-#     elfWeight.append(line)
-#   else:
-#     weights.append(elfWeight)
-#     elfWeight = []
-
 
 with open("input.txt") as f:
   for line in f:
@@ -34,6 +23,7 @@ with open("input.txt") as f:
 
   print(threeSum)
 
+# Part 1 
 # highestWeight = 0
 
 # for elf in weights:
