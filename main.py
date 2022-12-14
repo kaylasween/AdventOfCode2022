@@ -20,16 +20,16 @@ grid = np.array(grid, dtype=int)
 print(testGrid)
 
 visible = 0
-
-west = testGrid[y, :x]
-east = testGrid[y, x + 1:]
+score = 0
 
 for y,x in np.ndindex(testGrid.shape):
   tree = testGrid[y, x]
-  west = all(tree > )
-  east = all(tree > )
-  north = all(tree > )
+  west = all(tree > testGrid[y, :x])
+  east = all(tree > testGrid[y, x + 1:])
+  north = all(tree > testGrid[:y, x])
   south = all(tree > testGrid[y + 1:, x])
+
+  
   
   if(north or south or east or west):
     visible += 1
